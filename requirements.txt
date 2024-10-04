@@ -1,0 +1,7 @@
+
+black #to improve the overall outline of the code
+Flask==2.1.0
+Flask-PyMongo==2.3.0
+flask-cors==3.0.10
+python-dotenv==0.19.2
+
