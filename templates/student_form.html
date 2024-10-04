@@ -1,0 +1,36 @@
+{% extends "base.html" %}
+{% block title %}{{ title }}{% endblock %}
+{% block content %}
+    <h1>{{ title }}</h1>
+    <form method="POST">
+        <div>
+            <label for="name">Name:</label>
+            <input type="text" id="name" name="name" value="{{ student.name if student else '' }}" required>
+        </div>
+        <div>
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="email" value="{{ student.email if student else '' }}" required>
+        </div>
+        <div>
+            <label for="age">Age:</label>
+            <input type="number" id="age" name="age" value="{{ student.age if student else '' }}" required>
+        </div>
+        <div>
+            <label for="department">Department:</label>
+            <input type="text" id="department" name="department" value="{{ student.department if student else '' }}" required>
+        </div>
+        <div>
+            <label for="year">Year:</label>
+            <input type="text" id="year" name="year" value="{{ student.year if student else '' }}" required>
+        </div>
+        <div>
+            <label for="section">Section:</label>
+            <input type="text" id="section" name="section" value="{{ student.section if student else '' }}" required>
+        </div>
+        <div>
+            <label for="roll_no">Roll No:</label>
+            <input type="number" id="roll_no" name="roll_no" value="{{ student.roll_no if student else '' }}" required>
+        </div>
+        <button type="submit">Submit</button>
+    </form>
+{% endblock %}
