@@ -3,25 +3,25 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Student CRUD App - {% block title %}{% endblock %}</title>
-    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+    <title>Student CRUD APP - {% block title %}{% endblock %}</title>
 </head>
 <body>
     <nav>
         <ul>
-            <li><a href="{{ url_for('index') }}">Home</a></li>
-            <li><a href="{{ url_for('add_student') }}">Add Student</a></li>
+            <li><a href="{{url_for('index')}}">Home</a></li>
+            <li><a href="{{ url_for('add_student')}}">Add Student</a></li>
         </ul>
     </nav>
     <main>
         {% with messages = get_flashed_messages(with_categories=true) %}
             {% if messages %}
                 {% for category, message in messages %}
-                    <div class="alert alert-{{ category }}">{{ message }}</div>
+                    <div class = "alert alert-{{ cateogry}}">{{ message }}</div>
                 {% endfor %}
             {% endif %}
-        {% endwith %}
+        {% endwidth %}
         {% block content %}{% endblock %}
     </main>
+    
 </body>
 </html>
